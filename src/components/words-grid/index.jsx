@@ -2,10 +2,11 @@ import "./words-grid.css";
 import { useGameContext } from "../../contexts";
 
 export const WordsGrid = () => {
-    const { gameState: { guessesArray } } = useGameContext();
+    const { gameState: { currWord, guessesArray } } = useGameContext();
 
     return(
         <div className="wg-wr u_fx-col u_fx-al-cn">
+            <p>Current word: {currWord}</p>
         {
             guessesArray.map((guess, i) => {
                 return(

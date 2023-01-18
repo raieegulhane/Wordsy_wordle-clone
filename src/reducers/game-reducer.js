@@ -1,4 +1,5 @@
 const initialGameState = {
+    currWord: "",
     guessesArray: [
         [{letter: "", color: ""}, {letter: "", color: ""}, {letter: "", color: ""}, {letter: "", color: ""}, {letter: "", color: ""}],
         [{letter: "", color: ""}, {letter: "", color: ""}, {letter: "", color: ""}, {letter: "", color: ""}, {letter: "", color: ""}],
@@ -10,7 +11,16 @@ const initialGameState = {
 }
 
 const gameReducerFunction = (state, { type, payload }) => {
-    return initialGameState;
+    switch (type) {
+        case "INIT_GAME":
+            return({
+                ...state,
+                currWord: payload.toUpperCase()
+            });
+
+        default:
+            return initialGameState;
+    }
 }
 
 export { initialGameState, gameReducerFunction };
