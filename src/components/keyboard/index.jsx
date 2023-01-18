@@ -12,16 +12,15 @@ export const Keyboard = () => {
         {
             qwertyLayout.map((row, i) => {
                 return(
-                    <div className="kb-row u_fx-row">
+                    <div key={i} className="kb-row u_fx-row">
                     {
                         row.map((kbKey, j) => {
                             return(
-                                <div className="kb-key u_fx-col u_fx-js-cn u_fx-al-cn u_hov-scale">
+                                <div key={j} className="kb-key u_fx-col u_fx-js-cn u_fx-al-cn u_hov-scale">
                                 {
                                     kbKey === "BACKSPACE" ?
                                     <span className="material-icons kb-key-backspace">backspace</span> :
                                     <span>{kbKey}</span>
-
                                 }
                                 </div>
                             );
