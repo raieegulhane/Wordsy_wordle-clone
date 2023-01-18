@@ -9,8 +9,8 @@
 
 .kb-key {
     background-color: var(--kb-key);
-    min-height: 3.5rem;
-    min-width: 2.5rem;
+    min-height: 3rem;
+    min-width: 2rem;
     padding: 0 0.5rem;
     border-radius: 3px;
 }

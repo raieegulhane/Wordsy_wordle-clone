@@ -24,6 +24,6 @@
 
 .u_hov-scale:hover {
     transform: scale(1.1);
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }

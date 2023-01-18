@@ -1,0 +1,17 @@
+.wg-wr {
+    font-size: 1.5rem;
+    font-weight: bold;;
+    margin: 1rem;
+    gap: 0.5rem;
+}
+
+.wg-row {
+    gap: 0.5rem;
+}
+
+.wg-block {
+    min-width: 4rem;
+    min-height: 4rem;
+    border: 2px solid var(--grid-block-br);
+    border-radius: 3px;
+}

@@ -1,10 +1,11 @@
 import "./styles/styles.css";
-import { Keyboard, Navbar } from "./components";
+import { WordsGrid, Keyboard, Navbar } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <WordsGrid />
       <Keyboard />
     </div>
   );
