@@ -1,10 +1,11 @@
 import "./styles/styles.css";
-import { Navbar } from "./components";
+import { Keyboard, Navbar } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Keyboard />
     </div>
   );
 }
