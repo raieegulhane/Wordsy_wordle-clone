@@ -1,0 +1,15 @@
+@import url("./variables.css");
+
+* {
+    padding: 0;
+    outline: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);;
+    color: var(--font);
+    font-family: var(--app-font);
+    scroll-behavior: smooth;
+}
