@@ -23,7 +23,7 @@ export const Navbar = ({ theme, setTheme }) => {
                         <span className="material-icons">light_mode</span> :
                         <span className="material-icons">dark_mode</span>
                     }
-                </button>
+                </button>             
             </section>
         </nav>
     );

@@ -17,3 +17,17 @@
     min-height: 100vh;
     scroll-behavior: smooth;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    color: var(--grid-block-curr-br);
+    font-size: 0.75rem;
+    text-align: center;
+    width: 100vw;
+    margin: 1rem 0 0.5rem;
+}
+
+.footer-link {
+    color: var(--kb-key);
+}

@@ -14,6 +14,11 @@ function App() {
       />
       <WordsGrid />
       <Keyboard />
+
+      <footer className="footer">
+        <p>Made with &lt;/&gt; by Raiee</p>
+        <p>View <a className="footer-link" href="https://github.com/raieegulhane/Wordle-clone.git" target="_blank">source code</a></p>
+      </footer>
     </div>
   );
 }
