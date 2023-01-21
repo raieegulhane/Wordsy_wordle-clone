@@ -1,19 +1,18 @@
 .wg-wr {
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    margin: 1rem;
-    gap: 0.25rem;
 }
 
+.wg-wr,
 .wg-row {
-    gap: 0.25rem;
+    gap: 5px;
 }
 
 .wg-block {
-    min-width: 4rem;
-    min-height: 4rem;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
     border: 2px solid var(--grid-block-br);
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .wg-block.wg-block-current {
@@ -30,4 +29,10 @@
 
 .wg-block-grey {
     background-color: var(--guess-incorrect);
+}
+
+.wg-block.wg-block-green, 
+.wg-block.wg-block-yellow,
+.wg-block.wg-block-grey {
+    border-color: transparent;
 }

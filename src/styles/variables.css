@@ -6,7 +6,7 @@
     --app-font: 'Roboto', sans-serif;
 
     /* colors -- dark mode*/
-    --bg: #101721;
+    --bg: #121213;
     --font: #eeeeee;
 
     --grey-1: #1a222e;
@@ -14,10 +14,10 @@
     --grid-block-br: #2b323c;
     --grid-block-curr-br: #5b6674;
 
-    --kb-key: #2f3942;
-    --kb-key-used: #1c1b29;
+    --kb-key: #6e6e6f;
+    --kb-key-used: #3a3a3c;
 
     --guess-correct: #1ead46;
-    --guess-incorrect: #5f6771;
+    --guess-incorrect: #3a3a3c;
     --guess-misplaced: #ce8b10;
 }

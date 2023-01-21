@@ -1,5 +1,5 @@
 .nav-wr {
-    padding: 1rem 2.5rem;
+    padding: 1rem 2.5rem ;
     border-bottom: 2px solid var(--grey-1);
     margin-bottom: 2rem;
 }
@@ -14,8 +14,4 @@
     border: none;
     outline: none;
     margin: 0 0.5rem;
-}
-
-.nav-pill:hover {
-   cursor: pointer; 
 }
