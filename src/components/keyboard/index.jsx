@@ -73,6 +73,7 @@ export const Keyboard = () => {
         }
     }
 
+    // for virtual keyboard
     useEffect(() => {
         let greenKeys = "";
         let usedKeys = ""
@@ -93,8 +94,30 @@ export const Keyboard = () => {
         setUsedKeysStr(usedKeys);
     }, [currGuessIndex]);
 
+    // for physical keyboard
+    useEffect(() => {
+        const usePyshicalKeyboard = (e) => {
+            if (
+                (e.which >= 65 && e.which <= 90) || 
+                e.which === 13 ||
+                e.which === 8
+            ) {
+                keyPressHandler(String(e.key).toUpperCase());
+            }
+        }
+
+        window.addEventListener('keydown', usePyshicalKeyboard);
+    
+        return () => {
+          window.removeEventListener('keydown', usePyshicalKeyboard);
+        };
+    });
+
     return(
-        <div className="kb-wr u_fx-col u_fx-al-cn">
+        <div 
+            className="kb-wr u_fx-col u_fx-al-cn"
+            onKeyDown={(e) => {console.log(e.key)}} 
+        >
         {
             qwertyLayout.map((row, i) => {
                 return(
