@@ -2,15 +2,14 @@ import "./words-grid.css";
 import { useGameContext } from "../../contexts";
 
 export const WordsGrid = () => {
-    const { gameState: { currWord, guessesArray, currGuessIndex, currLetterIndex, inGameMessage} } = useGameContext();
+    const { gameState: { 
+        guessesArray, 
+        currGuessIndex, 
+        currLetterIndex
+    } } = useGameContext();
 
-    // console.log(guessesArray)
     return(
         <div className="wg-wr u_fx-col u_fx-al-cn">
-            <p>Message: {inGameMessage}</p>
-            <p>Current word: {currWord}</p>
-            <p>Current Guess Index: {currGuessIndex}</p>
-            <p>Current Letter Index: {currLetterIndex}</p>
         {
             guessesArray.map((guess, i) => {
                 return(
@@ -18,7 +17,14 @@ export const WordsGrid = () => {
                     {
                         guess.map(({ letter, color }, j) => {
                             return(
-                                <div key={j} className="wg-block u_fx-col u_fx-js-cn u_fx-al-cn">
+                                <div 
+                                    key={j} 
+                                    className={`
+                                        wg-block u_fx-col u_fx-js-cn u_fx-al-cn 
+                                        ${i === currGuessIndex && (j === currLetterIndex - 1 && currLetterIndex !== 0) ? "wg-block-current" : null}
+                                        ${"wg-block-" + color}
+                                    `}
+                                >
                                     {letter}
                                 </div>
                             );
