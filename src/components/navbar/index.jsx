@@ -20,8 +20,8 @@ export const Navbar = ({ theme, setTheme }) => {
                 >
                     {
                         theme === "dark" ? 
-                        <span className="material-icons">light_mode</span> :
-                        <span className="material-icons">dark_mode</span>
+                        <span className="material-icons btn-theme">light_mode</span> :
+                        <span className="material-icons btn-theme">dark_mode</span>
                     }
                 </button>             
             </section>

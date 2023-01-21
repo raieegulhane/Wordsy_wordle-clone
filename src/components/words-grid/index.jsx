@@ -23,6 +23,7 @@ export const WordsGrid = () => {
                                         wg-block u_fx-col u_fx-js-cn u_fx-al-cn 
                                         ${i === currGuessIndex && (j === currLetterIndex - 1 && currLetterIndex !== 0) ? "wg-block-current" : null}
                                         ${"wg-block-" + color}
+                                        ${i === currGuessIndex - 1 ? "flip-animation" : ""}
                                     `}
                                 >
                                     {letter}

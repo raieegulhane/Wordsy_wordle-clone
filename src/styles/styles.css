@@ -19,13 +19,11 @@
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
     color: var(--grid-block-curr-br);
     font-size: 0.75rem;
     text-align: center;
     width: 100vw;
-    margin: 1rem 0 0.5rem;
+    padding: 3rem 0 1rem;
 }
 
 .footer-link {

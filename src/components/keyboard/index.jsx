@@ -114,10 +114,7 @@ export const Keyboard = () => {
     });
 
     return(
-        <div 
-            className="kb-wr u_fx-col u_fx-al-cn"
-            onKeyDown={(e) => {console.log(e.key)}} 
-        >
+        <div className="kb-wr u_fx-col u_fx-al-cn">
         {
             qwertyLayout.map((row, i) => {
                 return(

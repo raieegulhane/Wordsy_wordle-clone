@@ -16,3 +16,7 @@
     margin: 0 0.5rem;
     transition: all .5s;
 }
+
+.btn-theme:hover {
+    transform: rotate(-90deg);
+}
