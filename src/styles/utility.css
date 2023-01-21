@@ -1,13 +1,20 @@
-.u_fx-row {
+/* flex properties */
+.u_fx-row,
+.u_fx-col {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
+.u_fx-row {
+    flex-direction: row;
+}
+
 .u_fx-col {
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+}
+
+.u_fx-js-cn {
+    justify-content: center;
 }
 
 .u_fx-js-sb {
@@ -18,12 +25,8 @@
     align-items: center;
 }
 
-.u_fx-js-cn {
-    justify-content: center;
-}
-
+/* hover effect */
 .u_hov-scale:hover {
     transform: scale(1.1);
-    transition: transform 0.3s ease;
     cursor: pointer;
 }
