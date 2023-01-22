@@ -23,7 +23,7 @@ export const ModalTemplate = ({ children, setShowModal }) => {
                     className="btn-modal-close"
                     onClick={closeModalHandler}
                 >
-                    <span class="material-icons">close</span>
+                    <span className="material-icons">close</span>
                 </button>
                 
                 <div>{children}</div>
@@ -39,7 +39,7 @@ export const ModalTemplate = ({ children, setShowModal }) => {
 
                 <footer className="modal-footer modal-sec u_fx-col u_fx-al-cn">
                     <section className="u_fx-row u_fx-al-cn">
-                        <span class="material-icons code-icon">code</span>
+                        <span className="material-icons code-icon">code</span>
                         <p>View <a className="modal-footer-link" href="https://github.com/raieegulhane/Wordle-clone.git" target="_blank">source code</a> on GitHub</p>
                     </section>
                     <p className="modal-footer-txt">Made with &lt;/&gt; by Raiee</p>

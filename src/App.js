@@ -6,6 +6,7 @@ import { WordsGrid, Keyboard, Navbar, ModalTemplate, InfoModal, StatsModal } fro
 
 function App() {
   const [showModal, setShowModal] = useState({show: false, modal: ""});
+  const [guessDist, setGuessDist] = useState([]);
 
   const browserDefaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage("wordle-theme", browserDefaultTheme ? "dark" : "light");
@@ -21,9 +22,35 @@ function App() {
   );
 
   const { gameState: { 
+    guessesArray,
+    currGuessIndex,
     gameOver,
     outcome
   } } = useGameContext();
+
+  useEffect(() => {
+    const guessDistributionArr = [];
+
+    for (let i = 0; i < guessesArray.length; i++) {
+        let correctGuess = 0;
+        let misplacedGuess = 0;
+        let wrongGuess = 0
+        for (let j = 0; j < guessesArray[i].length; j++) {
+            if (guessesArray[i][j].color === "green") {
+                correctGuess++;
+            }
+            if (guessesArray[i][j].color === "yellow") {
+                misplacedGuess++;
+            }
+            if (guessesArray[i][j].color === "grey") {
+                wrongGuess++;
+            }
+        }
+        guessDistributionArr.push({ green: correctGuess, yellow: misplacedGuess, grey: wrongGuess });
+    }
+
+    setGuessDist(guessDistributionArr);
+  }, [currGuessIndex]);
 
   useEffect(() => {
     if (gameOver) {
@@ -49,7 +76,7 @@ function App() {
     if (gameOver === true) {
       setTimeout(() => {
         setShowModal({ show: true, modal: "STAT"})
-      }, 2000);
+      }, 1700);
     }
   }, [gameOver]);
 
@@ -59,7 +86,7 @@ function App() {
         showModal.show &&
         <ModalTemplate setShowModal={setShowModal}>
           { showModal.modal === "INFO" && <InfoModal /> } 
-          { showModal.modal === "STAT" && <StatsModal gameStats={gameStats}/> }
+          { showModal.modal === "STAT" && <StatsModal gameStats={gameStats} guessDist={guessDist}/> }
         </ModalTemplate>
       }
       
@@ -70,8 +97,6 @@ function App() {
       />
       <WordsGrid />
       <Keyboard />
-
-      
     </div>
   );
 }

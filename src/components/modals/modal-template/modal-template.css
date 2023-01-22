@@ -91,24 +91,3 @@
     color: var(--font);
     cursor: pointer;
 }
-
-
-
-
-/* stats modal */
-.gd-block {
-    width: 2rem;
-    height: 1rem;
-}
-
-.gd-block-green {
-    background-color: var(--guess-correct);
-}
-
-.gd-block-yellow {
-    background-color: var(--guess-misplaced);
-}
-
-.gd-block-grey {
-    background-color: var(--guess-incorrect);
-}
