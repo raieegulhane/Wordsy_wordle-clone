@@ -1,0 +1,24 @@
+.info-header {
+    font-family: var(--logo-font);
+}
+
+.info-header,
+.info-txt {
+    padding: 0 0.75rem;
+}
+
+.info-ex-wr {
+    gap: 1rem;
+}
+
+.info-ex,
+.info-ex-blocks  {
+    gap: 0.25rem;
+}
+
+.wg-block.info-ex-block {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+}

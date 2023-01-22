@@ -1,9 +1,9 @@
 import useLocalStorage from "use-local-storage";
 import { useState } from "react";
 import "./styles/styles.css";
-import { WordsGrid, Keyboard, Navbar } from "./components";
-import { InfoModal } from "./components/modals";
-import { ModalTemplate } from "./components/modals/template";
+import { WordsGrid, Keyboard, Navbar, ModalTemplate, InfoModal, StatsModal } from "./components";
+
+
 
 function App() {
   const browserDefaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -13,13 +13,18 @@ function App() {
 
   return (
     <div className="App" data-theme={theme}>
-      <ModalTemplate setShowModal={setShowModal}>
-        <InfoModal />
-      </ModalTemplate>
-
+      {
+        showModal.show &&
+        <ModalTemplate setShowModal={setShowModal}>
+          { showModal.modal === "INFO" && <InfoModal /> } 
+          { showModal.modal === "STAT" && <StatsModal /> }
+        </ModalTemplate>
+      }
+      
       <Navbar 
         theme={theme}
         setTheme={setTheme}
+        setShowModal={setShowModal}
       />
       <WordsGrid />
       <Keyboard />

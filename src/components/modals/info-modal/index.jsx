@@ -1,10 +1,9 @@
-import "./modal.css";
-import { ModalTemplate } from "./template";
+import "./info-modal.css";
 
 export const InfoModal = () => {
     return(
         <div className="info-modal-wr">
-            <header className="modal-header">
+            <header className="info-header">
                 <h1>How To Play</h1>
                 <p>Guess the Wordle in 6 tries.</p>
             </header>
@@ -16,10 +15,11 @@ export const InfoModal = () => {
                 </ul>
             </div>
 
-            <div className="modal-sec info-ex u_fx-col">
+            <div className="info-ex-wr modal-sec u_fx-col">
                 <h3>Examples:</h3>
-                <div className="info-ex-row u_fx-col">
-                    <section className="info-ex-row-blocks u_fx-row">
+
+                <div className="info-ex u_fx-col">
+                    <section className="info-ex-blocks u_fx-row">
                     {
                         ["W", "A", "T", "E", "R"].map((letter, i) => {
                             return(
@@ -35,8 +35,9 @@ export const InfoModal = () => {
                     </section>
                     <p><strong>W</strong> is in the word and in the correct spot.</p>
                 </div>
-                <div className="info-ex-row u_fx-col">
-                    <section className="info-ex-row-blocks u_fx-row">
+
+                <div className="info-ex u_fx-col">
+                    <section className="info-ex-blocks u_fx-row">
                     {
                         ["A", "P", "P", "L", "E"].map((letter, i) => {
                             return(
@@ -52,7 +53,8 @@ export const InfoModal = () => {
                     </section>
                     <p><strong>L</strong> is in the word but in the wrong spot.</p>
                 </div>
-                <div className="info-ex-row u_fx-col">
+
+                <div className="info-ex u_fx-col">
                     <section className="info-ex-blocks u_fx-row">
                     {
                         ["U", "A", "L", "U", "E"].map((letter, i) => {

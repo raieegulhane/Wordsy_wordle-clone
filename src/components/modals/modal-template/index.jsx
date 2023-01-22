@@ -1,10 +1,20 @@
-import "./modal.css";
+import "./modal-template.css";
 
-export const ModalTemplate = ({ children }) => {
+export const ModalTemplate = ({ children, setShowModal }) => {
+    const closeModalHandler = () => {
+        setShowModal({ show: false, modal: "" });
+    }
+
     return(
-        <div className="modal-wr u_fx-col u_fx-js-cn u_fx-al-cn">
-            <div className="modal-cn">
-                <button className="btn-modal-close">
+        <div 
+            className="modal-wr u_fx-col u_fx-js-cn u_fx-al-cn"
+            onClick={closeModalHandler}
+        >
+            <div className="modal-cn" onClick={(e) => e.stopPropagation()}>
+                <button 
+                    className="btn-modal-close"
+                    onClick={closeModalHandler}
+                >
                     <span class="material-icons">close</span>
                 </button>
                 
