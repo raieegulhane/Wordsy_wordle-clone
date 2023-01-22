@@ -1,0 +1,106 @@
+/* template */
+.modal-wr {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 75%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    overflow-y: auto;
+}
+
+.modal-cn {
+    position: relative;
+    background-color: var(--modal-bg);
+    max-width: 70%;
+    padding: 2rem 1.5rem;
+    border: solid 1px var(--grey-1);
+    border-radius: 4px;
+    margin: 1rem;
+}
+
+.btn-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    color: var(--font);
+    font-size: 0.75rem;
+    border: none;
+    outline: none;
+}
+
+.modal-header {
+    font-family: var(--logo-font);
+    padding: 0 0.75rem;
+}
+
+
+/* info-modal */
+.info-txt {
+    padding-left: 0.75rem;
+}
+.info-ex {
+    gap: 1rem;
+}
+
+.info-ex-blocks {
+    gap: 0.25rem;
+}
+
+.info-ex-row {
+    gap: 0.25rem;
+}
+
+.wg-block.info-ex-block {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+
+}
+
+
+/* modal section */
+.modal-sec {
+    padding: 1.5rem 0.75rem 0;
+    border-top: 1px solid var(--grey-1);
+    margin-top: 1.5rem;
+}
+
+
+/* modal button */
+.modal-btn {
+    background-color: transparent;
+    color: var(--font);
+    font-weight: bold;
+    width: 70%;
+    padding: 0.5rem;
+    border: 2px solid var(--font);
+    border-radius: 2rem;
+    margin: 0.5rem 1rem;
+}
+
+
+/* footer */
+.modal-footer {
+    gap: 1rem;
+}
+
+.modal-footer-link {
+    color: var(--font);
+    font-weight: bold;
+}
+
+.modal-footer-txt {
+    font-size: 0.75rem;
+    color: var(--kb-key);
+}
+
+.code-icon {
+    color: var(--guess-correct);
+    margin-right: 0.5rem;
+}

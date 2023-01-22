@@ -9,6 +9,8 @@
     --bg: #fafafa;
     --font: #2a2a2a;
 
+    --modal-bg: #fff;
+
     --grey-1: #e7e7e7;
 
     --grid-block-br: #ccc;
@@ -25,6 +27,8 @@
 [data-theme='dark'] {
     --bg: #121212;
     --font: #eeeeee;
+
+    --modal-bg: #000;
 
     --grey-1: #222;
 
