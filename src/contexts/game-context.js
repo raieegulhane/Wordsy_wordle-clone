@@ -6,9 +6,7 @@ const GameContext = createContext(initialGameState);
 
 const GameProvider = ({ children }) => {
     useEffect(() => {
-        const currentWord = words[Math.floor(Math.random()*words.length)]
-        gameDispatch({ type: "INIT_GAME", payload: currentWord });
-        console.log(`IN_CASE_YOU_ARE_FURSTRATED: "${currentWord}"`);
+        gameDispatch({ type: "INIT_GAME"});
     }, []);
     
     const [ gameState, gameDispatch ] = useReducer(gameReducerFunction, initialGameState);

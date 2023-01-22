@@ -1,8 +1,16 @@
+import { useGameContext } from "../../../contexts";
 import "./modal-template.css";
 
 export const ModalTemplate = ({ children, setShowModal }) => {
+    const { gameDispatch } = useGameContext();
+
     const closeModalHandler = () => {
         setShowModal({ show: false, modal: "" });
+    }
+
+    const startNewGameHandler = () => {
+        gameDispatch({ type: "INIT_GAME"});
+        setShowModal({ show: false, modal: ""});
     }
 
     return(
@@ -21,7 +29,12 @@ export const ModalTemplate = ({ children, setShowModal }) => {
                 <div>{children}</div>
 
                 <div className="modal-sec u_fx-col u_fx-al-cn">
-                    <button className="modal-btn">Start New Game</button>
+                    <button 
+                        className="modal-btn"
+                        onClick={startNewGameHandler}
+                    >
+                        Start New Game
+                    </button>
                 </div>
 
                 <footer className="modal-footer modal-sec u_fx-col u_fx-al-cn">

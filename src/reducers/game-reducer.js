@@ -1,3 +1,5 @@
+import { words } from "../words";
+
 const initialGameState = {
     currWord: "",
     guessesArray: [
@@ -12,7 +14,8 @@ const initialGameState = {
     currGuessIndex: 0,
     currLetterIndex: 0,
     inGameMessage: "",
-    gameOver: false
+    gameOver: false,
+    outcome: ""
 }
 
 const gameReducerFunction = (state, { type, payload }) => {
@@ -20,9 +23,18 @@ const gameReducerFunction = (state, { type, payload }) => {
 
     switch (type) {
         case "INIT_GAME":
+            const newWord = words[Math.floor(Math.random()*words.length)];
+            console.log("IN_CASE_YOU_ARE_FRUSTRATED: ", newWord);
+            
             return({
-                ...state,
-                currWord: payload.toUpperCase()
+                currWord: newWord.toUpperCase(),
+                guessesArray: initialGameState.guessesArray,
+                currGuess: "",
+                currGuessIndex: 0,
+                currLetterIndex: 0,
+                inGameMessage: "",
+                gameOver: false,
+                outcome: ""
             });
 
 
@@ -115,11 +127,13 @@ const gameReducerFunction = (state, { type, payload }) => {
                 payload ? {
                     ...state,
                     inGameMessage: "YOU WON!!",
-                    gameOver: true
+                    gameOver: true,
+                    outcome: "WON"
                 } : {
                     ...state,
                     inGameMessage: "Better luck next time",
-                    gameOver: true
+                    gameOver: true,
+                    outcome: "LOST"
                 }
             );
 
