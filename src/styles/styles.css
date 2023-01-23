@@ -1,5 +1,7 @@
+@import url("react-toastify/dist/ReactToastify.css");
 @import url("./variables.css");
 @import url("./utility.css");
+@import url("./toastify.css");
 
 * {
     padding: 0;

@@ -1,0 +1,28 @@
+.Toastify__toast-container {
+    top: 3rem;
+    padding: 0;
+    width: fit-content;
+    max-width: 300px;
+}
+
+.Toastify__toast {
+    min-height: fit-content;
+    max-height: fit-content;
+    border-radius: 2rem;
+}
+
+.Toastify__toast-body {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+} 
+
+.Toastify__toast-icon {
+    display: none;
+}
+  
+.Toastify__toast > button>  svg {
+    display: none;
+}
