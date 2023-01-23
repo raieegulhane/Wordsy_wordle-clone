@@ -13,7 +13,6 @@ const initialGameState = {
     currGuess: "",
     currGuessIndex: 0,
     currLetterIndex: 0,
-    inGameMessage: "",
     gameOver: false,
     outcome: ""
 }
@@ -32,7 +31,6 @@ const gameReducerFunction = (state, { type, payload }) => {
                 currGuess: "",
                 currGuessIndex: 0,
                 currLetterIndex: 0,
-                inGameMessage: "",
                 gameOver: false,
                 outcome: ""
             });
@@ -114,24 +112,15 @@ const gameReducerFunction = (state, { type, payload }) => {
                 currLetterIndex: 0,
             });
 
-
-        case "GENERATE_MESSAGE":
-            return({
-                ...state,
-                inGameMessage: payload
-            });
-
-
+            
         case "RECORD_OUTCOME": 
             return(
                 payload ? {
                     ...state,
-                    inGameMessage: "YOU WON!!",
                     gameOver: true,
                     outcome: "WON"
                 } : {
                     ...state,
-                    inGameMessage: "Better luck next time",
                     gameOver: true,
                     outcome: "LOST"
                 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { useGameContext } from "../../contexts";
 import { words } from "../../words";
 import "./keyboard.css";
@@ -24,35 +25,34 @@ export const Keyboard = () => {
     ];
 
     const addLetterHandler = (key) => {
-        if (currLetterIndex === 5) {
-            return gameDispatch({ type: "GENERATE_MESSAGE", payload: "Guess can have 5 letters only"});
+        if (currLetterIndex < 5) {
+            gameDispatch({ type: "ADD_LETTER", payload: key });
         }
-
-        gameDispatch({ type: "ADD_LETTER", payload: key });
     }
 
     const removeLetterHandler = () => {
-        if (currLetterIndex === 0) {
-            return gameDispatch({ type: "GENERATE_MESSAGE", payload: "No letters"})
+        if (currLetterIndex > 0) {
+            gameDispatch({ type: "REMOVE_LETTER" });
         }
-
-        gameDispatch({ type: "REMOVE_LETTER" });
     } 
 
     const enterHandler = () => {
         if (currLetterIndex < 5) {
-            return gameDispatch({ type: "GENERATE_MESSAGE", payload: "Not enough letters"});
+            return toast.warning("Not enough letters");
         }
 
         if (!words.includes(currGuess.toLowerCase())) {
-            return gameDispatch({ type: "GENERATE_MESSAGE", payload: "Not in word list"});
+            return toast.warning("Not in word list");
         }
 
         if (currGuess === currWord) {
+            toast.success("You won!!")
             gameDispatch({ type: "RECORD_OUTCOME", payload: true })
         }
 
         if (currGuessIndex === 5) {
+            toast.error("Better luck next time!");
+            toast(`word: ${currWord}`);
             gameDispatch({ type: "RECORD_OUTCOME", payload: false });
         }
 

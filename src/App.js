@@ -1,8 +1,9 @@
-import useLocalStorage from "use-local-storage";
 import { useState, useEffect } from "react";
-import "./styles/styles.css";
+import useLocalStorage from "use-local-storage";
+import { ToastContainer } from "react-toastify";
 import { useGameContext } from "./contexts";
 import { WordsGrid, Keyboard, Navbar, ModalTemplate, InfoModal, StatsModal } from "./components";
+import "./styles/styles.css";
 
 function App() {
   const [showModal, setShowModal] = useState({show: false, modal: ""});
@@ -76,12 +77,25 @@ function App() {
     if (gameOver === true) {
       setTimeout(() => {
         setShowModal({ show: true, modal: "STAT"})
-      }, 1700);
+      }, 2000);
     }
   }, [gameOver]);
 
   return (
     <div className="App" data-theme={theme}>
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+        pauseOnHover
+        theme="colored"
+      />
+
       {
         showModal.show &&
         <ModalTemplate setShowModal={setShowModal}>
