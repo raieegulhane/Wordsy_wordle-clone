@@ -1,5 +1,5 @@
-import "./words-grid.css";
 import { useGameContext } from "../../contexts";
+import "./words-grid.css";
 
 export const WordsGrid = () => {
     const { gameState: { 

@@ -50,7 +50,7 @@ export const Keyboard = () => {
             gameDispatch({ type: "RECORD_OUTCOME", payload: true })
         }
 
-        if (currGuessIndex === 5) {
+        if (currGuessIndex === 5 && currGuess !== currWord) {
             toast.error("Better luck next time!");
             toast(`word: ${currWord}`);
             gameDispatch({ type: "RECORD_OUTCOME", payload: false });

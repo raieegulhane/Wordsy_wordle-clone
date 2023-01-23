@@ -51,9 +51,13 @@
     height: 0.9rem;
     font-size: 0.75rem;
     padding: 0 0.5rem;
+    margin: 0.25rem 0;
 }
 
 .stats-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -64,4 +68,39 @@
 .guess-dist-block-empty
 .stats-number-txt {
     font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .stats-outcome {
+        font-size: 1.25rem;
+    }
+    
+    .stats-heading {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .guess-dist {
+        gap: 0px;
+    }
+    
+    .guess-dist-row {
+        gap: 0.25rem;
+    }
+    
+    .guess-dist-block {
+        height: 0.75rem;
+    }
+
+    .stats-display {
+        flex-direction: column;
+    }
+    
+    .stats-number {
+        font-size: 1.75rem;
+    }
+    
+    .stats-number-txt {
+        font-size: 0.75rem;
+    }
 }

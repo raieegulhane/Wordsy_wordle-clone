@@ -20,3 +20,22 @@
 .btn-theme:hover {
     transform: rotate(-90deg);
 }
+
+@media only screen and (max-width: 480px) {
+    .nav-wr {
+        padding: 0.75rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-pill {
+        margin: 0 5px;
+    }
+
+    .nav-pill-icon {
+        font-size: 1.25rem;
+    }
+}

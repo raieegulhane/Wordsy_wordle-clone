@@ -61,3 +61,20 @@
       transform: scaleY(1);
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .wg-wr {
+        font-size: 1.25rem;
+        margin: 1rem;
+    }
+    
+    .wg-wr,
+    .wg-row {
+        gap: 3px;
+    }
+    
+    .wg-block {
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+    }
+}

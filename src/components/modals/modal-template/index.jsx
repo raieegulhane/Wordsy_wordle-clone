@@ -1,5 +1,5 @@
-import { useGameContext } from "../../../contexts";
 import "./modal-template.css";
+import { useGameContext } from "../../../contexts";
 
 export const ModalTemplate = ({ children, setShowModal }) => {
     const { gameDispatch } = useGameContext();
@@ -23,7 +23,7 @@ export const ModalTemplate = ({ children, setShowModal }) => {
                     className="btn-modal-close"
                     onClick={closeModalHandler}
                 >
-                    <span className="material-icons">close</span>
+                    <span className="material-icons btn-modal-close-icon">close</span>
                 </button>
                 
                 <div>{children}</div>
@@ -38,7 +38,7 @@ export const ModalTemplate = ({ children, setShowModal }) => {
                 </div>
 
                 <footer className="modal-footer modal-sec u_fx-col u_fx-al-cn">
-                    <section className="u_fx-row u_fx-al-cn">
+                    <section className="u_fx-row u_fx-al-cn link-to-code">
                         <span className="material-icons code-icon">code</span>
                         <p>View <a className="modal-footer-link" href="https://github.com/raieegulhane/Wordle-clone.git" target="_blank">source code</a> on GitHub</p>
                     </section>

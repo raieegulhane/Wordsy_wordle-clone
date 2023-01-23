@@ -1,5 +1,5 @@
-import "./stats-modal.css";
 import { useGameContext } from "../../../contexts";
+import "./stats-modal.css";
 
 export const StatsModal = ({ gameStats, guessDist }) => {
     const { gameNumber, gamesWon, winStreak } = gameStats;
@@ -62,7 +62,7 @@ export const StatsModal = ({ gameStats, guessDist }) => {
             <div className="stats-display-wr modal-sec">
                 <h3 className="stats-heading">STATISTICS</h3>
                     
-                <div className="stats-display u_fx-row u_fx-js-cn">
+                <div className="stats-display">
                     <section className="u_fx-col u_fx-al-cn">
                         <p className="stats-number">{gameNumber}</p>
                         <p className="stats-number-txt">Games Played</p>
