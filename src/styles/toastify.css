@@ -1,5 +1,5 @@
 .Toastify__toast-container {
-    top: 3rem;
+    top: 4.5rem;
     padding: 0;
     width: fit-content;
     max-width: 300px;
@@ -12,6 +12,7 @@
 }
 
 .Toastify__toast-body {
+    font-family: var(--app-font);
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -25,4 +26,32 @@
   
 .Toastify__toast > button>  svg {
     display: none;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+    background-color: var(--guess-misplaced);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+    background-color: var(--guess-correct);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--warning,
+.Toastify__toast-theme--colored.Toastify__toast--success {
+    color: var(--font);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error,
+.Toastify__toast-theme--colored.Toastify__toast--default {
+    color: var(--bg);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--default {
+    background-color: var(--font);
+}
+
+@media screen and (max-width: 480px) {
+    .Toastify__toast-container {
+        left: 1rem;
+    }
 }
