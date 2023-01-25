@@ -50,7 +50,7 @@ export const StatsModal = ({ gameStats, guessDist }) => {
                                             })
                                         }
                                         </div> :
-                                        <span className="guess-dist-block-empty guess-dist-block-grey">0</span>
+                                        <span className="guess-dist-block-empty guess-dist-block-grey u_fx-col u_fx-js-cn">0</span>
                                     }
                                 </div>
                             );
