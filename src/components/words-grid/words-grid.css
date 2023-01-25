@@ -1,19 +1,18 @@
 .wg-wr {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 1rem;
 }
 
 .wg-wr,
 .wg-row {
-    gap: 5px;
+    gap: 2px;
 }
 
 .wg-block {
-    min-width: 3.5rem;
-    min-height: 3.5rem;
-    border: 2px solid var(--grid-block-br);
-    border-radius: 2px;
+    min-width: 4rem;
+    min-height: 4rem;
+    border: 3px solid var(--grid-block-br);
+    border-radius: var(--br-sq);
 }
 
 .wg-block.wg-block-current {
@@ -65,7 +64,7 @@
 
 @media only screen and (max-width: 480px) {
     .wg-block {
-        min-width: 3.25rem;
-        min-height: 3.25rem;
+        min-width: 3.5rem;
+        min-height: 3.5rem;
     }
 }

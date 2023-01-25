@@ -35,6 +35,16 @@
     flex-grow: 1;
 }
 
+.guess-dist-block:nth-child(1) {
+    border-top-left-radius: var(--br-sq);
+    border-bottom-left-radius: var(--br-sq);
+}
+
+.guess-dist-block:nth-child(5) {
+    border-top-right-radius: var(--br-sq);
+    border-bottom-right-radius: var(--br-sq);
+}
+
 .guess-dist-block-green {
     background-color: var(--guess-correct);
 }
@@ -51,6 +61,7 @@
     height: 0.9rem;
     font-size: 0.75rem;
     padding: 0 0.5rem;
+    border-radius: var(--br-cr);
     margin: 0.25rem 0;
 }
 
