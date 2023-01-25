@@ -17,7 +17,8 @@
   - Total games playd
   - Games won.
   - Winning streak
-- Light and dark mode
+- Light and dark mode.
+- Mobile responsive.
 
 ---
 
