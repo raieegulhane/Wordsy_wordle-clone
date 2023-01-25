@@ -30,6 +30,10 @@ function App() {
   } } = useGameContext();
 
   useEffect(() => {
+    setShowModal({ show: true, modal: "INFO"});
+  }, []);
+
+  useEffect(() => {
     const guessDistributionArr = [];
 
     for (let i = 0; i < guessesArray.length; i++) {
