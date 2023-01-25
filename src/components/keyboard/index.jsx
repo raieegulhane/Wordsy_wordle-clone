@@ -16,7 +16,8 @@ export const Keyboard = () => {
             currLetterIndex, 
             gameOver 
         }, 
-    gameDispatch } = useGameContext();
+        gameDispatch 
+    } = useGameContext();
     
     const qwertyLayout = [
         ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
