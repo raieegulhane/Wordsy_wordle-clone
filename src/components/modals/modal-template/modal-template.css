@@ -14,7 +14,7 @@
 .modal-cn {
     position: relative;
     background-color: var(--modal-bg);
-    max-width: 70%;
+    min-width: 30%;
     padding: 2rem 1.5rem;
     border: solid 1px var(--grey-1);
     border-radius: 4px;
@@ -99,7 +99,7 @@
 
     .modal-cn {
         font-size: 0.8rem;
-        max-width: 100%;
+        min-width: 90%;
         padding: 1rem;
     }
 

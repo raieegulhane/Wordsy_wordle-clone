@@ -6,9 +6,9 @@ export const Navbar = ({ theme, setTheme, setShowModal }) => {
     }
     
     return(
-        <nav className="nav-wr u_fx-row u_fx-js-sb">
+        <nav className="nav-wr u_fx-row u_fx-js-sb u_fx-al-cn">
             <h1 className="nav-logo">Wordle</h1>
-            <section className="nav-pills-wr u_fx-row">
+            <section className="nav-pills-wr u_fx-row u_fx-al-cn">
                 <button 
                     className="nav-pill u_hov-scale"
                     onClick={() => setShowModal({ show: true, modal: "INFO"})}
