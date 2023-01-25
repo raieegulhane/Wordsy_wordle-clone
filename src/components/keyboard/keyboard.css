@@ -1,23 +1,23 @@
 .kb-wr {
-    padding: 1rem;
     margin-top: 1rem;
 }
 
 .kb-wr,
 .kb-row {
-    gap: 4px;
+    gap: 3px;
 }
 
 .kb-key {
     color: var(--font);
+    font: var(--app-font);
     font-size: 1rem;
     font-weight: bold;
-    min-height: 3rem;
+    min-height: 3.25rem;
     min-width: 2.25rem;
     padding: 0.75rem;
     border: none;
     outline: none;
-    border-radius: 3px;
+    border-radius: var(--br-sq);
 }
 
 .kb-key-unused {
@@ -41,13 +41,14 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .kb-wr {
-        padding: 0.25rem;
+    .kb-wr,
+    .kb-row {
+        gap: 3px;
     }
 
     .kb-key {
         min-height: 2.75rem;
-        min-width: 1.75rem;
-        padding: 0.25rem;
+        min-width: 1.6rem;
+        padding: 3px;
     }
 }
