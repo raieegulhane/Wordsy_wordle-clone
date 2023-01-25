@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
 :root {
     /* fonts */
-    --logo-font: 'Roboto Slab', serif;
-    --app-font: 'Roboto', sans-serif;
+    /* --logo-font: 'Roboto Slab', serif; */
+    /* --app-font: 'Roboto', sans-serif; */
 
-    /* colors -- dark mode*/
-    --bg: #fafafa;
-    --font: #2a2a2a;
+    --app-font: 'Mali', cursive;
+    /* --app-font: 'Comic Neue', cursive; */
+
+    /* colors -- light mode*/
+    --bg: #fef9e5;
+    --font: #5f2c15;
 
     --modal-bg: #fff;
 
@@ -22,11 +27,15 @@
     --guess-correct: #61de56;
     --guess-incorrect: #a3a3a3;
     --guess-misplaced: #efd14b;
+
+    --br-sq: 0.5rem;
+    --br-cr: 1rem;
+    --border: #5f2c15;
 }
 
 [data-theme='dark'] {
-    --bg: #121212;
-    --font: #eeeeee;
+    --bg: #36313f;
+    --font: #f7f0d7;
 
     --modal-bg: #000;
 
@@ -41,4 +50,6 @@
     --guess-correct: #1ead46;
     --guess-incorrect: #3a3a3a;
     --guess-misplaced: #ce8b10;
+
+    --border: #98939e;
 }
